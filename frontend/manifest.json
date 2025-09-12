@@ -1,0 +1,16 @@
+{
+  "name": "Citoyen‑AI",
+  "short_name": "CitoyenAI",
+  "description": "Assistant local pour les démarches administratives algériennes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#0170ff",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJz48cmVjdCB3aWR0aD0nNTEyJyBoZWlnaHQ9JzUxMicgZmlsbD0nIzAxNzBmZicvPjx0ZXh0IHg9JzI1NicgeT0nMzYwJyBmb250LXNpemU9JzM1MCcgdGV4dC1hbmNob3I9J21pZGRsZScgZmlsbD0nd2hpdGUnPkE8L3RleHQ+PC9zdmc+",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ]
+}

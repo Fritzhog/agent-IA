@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citoyen‑AI Chat</title>
+  <!-- Manifest pour PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Feuille de style principale -->
+  <link rel="stylesheet" href="/styles.css">
+  <!-- Icône simplifiée (favicon) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64'><rect width='64' height='64' fill='%230170ff'/><text x='32' y='42' font-size='48' text-anchor='middle' fill='white'>A</text></svg>">
+</head>
+<body>
+  <noscript>Cette application nécessite JavaScript pour fonctionner.</noscript>
+  <div id="app">
+    <header>
+      <h1>Citoyen‑AI</h1>
+      <p>Assistant local pour les démarches administratives algériennes</p>
+    </header>
+    <div class="controls">
+      <label for="lang-select">Langue du saisie :</label>
+      <select id="lang-select">
+        <option value="ltr" selected>Français (LTR)</option>
+        <option value="rtl">العربية (RTL)</option>
+      </select>
+    </div>
+    <main id="chat-container" aria-label="Zone de discussion" tabindex="0"></main>
+    <form id="chat-form">
+      <input type="text" id="user-input" placeholder="Écrivez votre message..." autocomplete="off" required />
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <script src="/app.js"></script>
+  <script>
+    // Enregistrer le service worker pour PWA offline‑first
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(err => {
+          console.error('Erreur lors de l’inscription du service worker :', err);
+        });
+      });
+    }
+  </script>
+</body>
+</html>
